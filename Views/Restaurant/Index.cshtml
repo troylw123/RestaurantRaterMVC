@@ -24,17 +24,19 @@
         {
             <tr>
                 <td>
+                    
+                    @Html.DisplayFor(modelItem => item.Name)
+                    
+                </td>
+                <td>
                     @if (item.Score > 0)
                     {
-                    @Html.DisplayFor(modelItem => item.Name)
+                    @Html.DisplayFor(modelItem => item.Score)
                     }
                     else 
                     {
                         <span>No Ratings Yet</span>
                     }
-                </td>
-                <td>
-                    @Html.DisplayFor(modelItem => item.Score)
                 </td>
                 <td>
                     @Html.ActionLink("Edit", "Edit", "Restaurant", new { id = item.Id}) |
@@ -45,3 +47,5 @@
         }
     </tbody>
 </table>
+
+
